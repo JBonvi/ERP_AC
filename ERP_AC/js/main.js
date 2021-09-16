@@ -29,7 +29,6 @@ function myFunction() {
     for (let i = 0; i < dictionary.length; i++) {
         const currentDate = dictionary[i].dateValue.split("/")
         const newDate = new Date(currentDate[2], currentDate[1]-1, currentDate[0])
-        dictionary[i].dateValue = newDate.getDate() + "/" + newDate.getMonth()  + "/" + newDate.getFullYear()
         dictionary[i].daysInBetween = Math.ceil(((newDate.getTime() - today.getTime()) / (1000 * 3600 * 24)));
         var alert = ""
         if (dictionary[i].daysInBetween < 0) {
